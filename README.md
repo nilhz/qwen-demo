@@ -1,0 +1,1 @@
+Baixe o arquivo https://huggingface.co/unsloth/Qwen3.5-4B-GGUF/blob/main/Qwen3.5-4B-Q4_K_M.gguf para o diretório ./LLM. Preferencialmente mapeie um volume com este arquivo para o diretório ./LLM ao iniciar container.
