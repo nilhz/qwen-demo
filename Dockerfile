@@ -8,8 +8,6 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV CMAKE_ARGS="-DGGML_CUDA=on"
 
 WORKDIR /app
-COPY ./app.py requirements.txt ./
-COPY ./LLM ./LLM
 
 RUN apt-get update && apt-get install -y \
     python3 \
@@ -21,7 +19,10 @@ RUN apt-get update && apt-get install -y \
     ninja-build \
     && rm -rf /var/lib/apt/lists/*
 
+COPY requirements.txt ./
 RUN python3 -m pip install --upgrade pip && \
     python3 -m pip install --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cu122 --no-cache-dir -r requirements.txt
 
+COPY ./LLM ./LLM
+COPY ./app.py ./
 CMD ["python3", "app.py"]
