@@ -1,5 +1,5 @@
 # docker build -t qwen .
-# docker run -it --gpus all --name qwen qwen
+# docker run -it --gpus all -v /mnt/d/docker/volume/qwen/LLM:/app/LLM --name qwen qwen
 
 FROM nvidia/cuda:12.2.0-devel-ubuntu22.04
 

@@ -1,1 +1,2 @@
-Baixe o arquivo https://huggingface.co/unsloth/Qwen3.5-4B-GGUF/blob/main/Qwen3.5-4B-Q4_K_M.gguf para o diretório ./LLM. Preferencialmente mapeie um volume com este arquivo para o diretório ./LLM ao iniciar container.
+Baixe o arquivo https://huggingface.co/unsloth/Qwen3.5-4B-GGUF/blob/main/Qwen3.5-4B-Q4_K_M.gguf e mapeie um volume contendo este arquivo para o diretório ./LLM ao iniciar container.
+Por exemplo, salve o arquivo localmente como /caminho/no/host/LLM/Qwen3.5-4B-Q4_K_M.gguf e mapeie com -v /caminho/no/host/LLM/:/app/LLM no docker run.
